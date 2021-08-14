@@ -12,12 +12,34 @@
   </style>
   <link rel="stylesheet" href="assets/style.css">
   <script src="func.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
 <body>
-    <div id="point">
-        point
-    </div>
+    <header>
+      <div class="nav-bar">
+        <a href="#" class="logo">Delicare</a>
+        <div class="nav">
+          <ul>
+            <li><a href="#">Tôi muốn cung cấp</a></li>
+            <li><a href="#">Tôi cần hỗ trợ</a></li>
+          </ul>
+          
+        </div>
+        <div class="search-box">
+          
+            <input type="text" class="searchterm" name="" placeholder="Tìm kiếm">
+            <a class="search-btn" href="#"><i class="fas fa-search"></i></a>
+          
+        </div>
+      </div>
+      
+    </header>
+  
     <div id="map"></div>
+    <div class="container">
+    </div>
+
     <script>
         var map = new GMaps({
           el: '#map',
@@ -31,6 +53,14 @@
         });
         
       </script>
+    <input type="text" placeholder="Type something..." id="myInput">
+    <button type="button" onclick="getInput();">Get Value</button>
     
+    <script>
+        function getInput(){
+            var inputVal = document.getElementById("myInput").value;
+            alert(inputVal);
+        }
+    </script>
 </body>
 </html>
