@@ -18,3 +18,6 @@ function DanCungCap(){
 function CanHoTro(){
   alert("Can ho tro");
 }
+function DatHang(){
+  alert("Đặt hàng ?");
+}

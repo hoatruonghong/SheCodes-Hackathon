@@ -181,3 +181,9 @@ a{
     align-items: center;
     border: 2px solid var(--yellow-color) ;
 }
+.form1{
+    margin: auto 20px;
+}
+.form2{
+    margin: auto 20px;
+}
