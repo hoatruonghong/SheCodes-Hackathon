@@ -3,7 +3,7 @@ const knex = require('knex')({
     connection: {
       host : 'localhost',
       user : 'root',
-      database : 'HP'
+      database : 'HP'//Shecode
     }
   });
   module.exports = knex;
