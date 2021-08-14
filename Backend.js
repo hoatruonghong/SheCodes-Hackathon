@@ -1,3 +1,6 @@
+const model = require("./model");
+
+
 class Account{
     constructor(id, name, phone, the_needy, ready, user_type, longitude, latitude) {
         this.id=id;
@@ -36,7 +39,6 @@ class Bill{
         this.id_needy=id_needy;
     }
 }
-
 class User{
     constructor(id_user, username, pwd){
         this.id_user=id_user;
@@ -44,7 +46,19 @@ class User{
         this.pwd=pwd;
     }
 }
+const { getAccount } = require('./model.js')
 
+const model = require('./model.js')
+async function Diemcungcap(){
+
+    const account = await model.getAccount()
+    for( i = 0; i<account[0].length; i++){
+        console.log(account[0][i].fullname)
+    }
+    //console.log(account[0])
+}
+test()
+//Tạo get set info cho account, gọi các hàm bên controller
 //Tạo get set info cho account, gọi các hàm bên controller
 /*--------Account-----------*/
 function getID_User(account){
@@ -117,5 +131,3 @@ function getID_User(user){
 function getPwdAccount(user){
     return user.pwd;
 }
-
-
