@@ -10,12 +10,16 @@ module.exports = {
         const sql=`select * from point`;
         console.log();
         return db.raw(sql);
-    }
+    },
     allItem(){
         const sql=`select * from item`;
         console.log();
         return db.raw(sql);
+    },
+    addPoint(id,user, the_needy, long, lat){
+        const sql=``
     }
+
 
 //Hàm hàm hàm
 
