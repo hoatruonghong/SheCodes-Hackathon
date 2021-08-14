@@ -1,3 +1,5 @@
+const { allPoint } = require("./model");
+
 function initMap() {
     var latLng = { lat: 21.0168864, lng: 105.7855574 }
     var marker = new google.maps.Marker({
@@ -5,16 +7,77 @@ function initMap() {
       map: map,
     });
 }
-
+        
+        
 function DiemCungCap(){
-  alert("Diem cung cap");
+
+  var map = new GMaps({
+    el: '#map',
+    lat: 10.043333,
+    lng: 106.028333
+  });
+  var latLng //= { lat: 10.043333, lng: 106.028333 }
+  Points=AllPoint(1);
+  var a
+  for (i=0; i<Points.length; i++){
+    latLng = { lat: Points[i].longitude, lng: Points[i].latitude }
+    a = maps.Marker({
+      position: latLng,
+      map: map,
+    });
+  }
 }
 function HoTroYTe(){
-  alert("Ho tro y te");
+  
+  var map = new GMaps({
+    el: '#map',
+    lat: 10.043333,
+    lng: 106.028333
+  });
+  var latLng //= { lat: 10.043333, lng: 106.028333 }
+  Points=AllPoint(2);
+  var a
+  for (i=0; i<Points.length; i++){
+    latLng = { lat: Points[i].longitude, lng: Points[i].latitude }
+    a = maps.Marker({
+      position: latLng,
+      map: map,
+    });
+  }
 }
 function DanCungCap(){
-  alert("Dan Cung Cap");
+  
+  var map = new GMaps({
+    el: '#map',
+    lat: 10.043333,
+    lng: 106.028333
+  });
+  var latLng //= { lat: 10.043333, lng: 106.028333 }
+  Points=AllPoint(3);
+  var a
+  for (i=0; i<Points.length; i++){
+    latLng = { lat: Points[i].longitude, lng: Points[i].latitude }
+    a = maps.Marker({
+      position: latLng,
+      map: map,
+    });
+  }
 }
 function CanHoTro(){
-  alert("Can ho tro");
+  
+  var map = new GMaps({
+    el: '#map',
+    lat: 10.043333,
+    lng: 106.028333
+  });
+  var latLng //= { lat: 10.043333, lng: 106.028333 }
+  Points=AllPoint(4);
+  var a
+  for (i=0; i<Points.length; i++){
+    latLng = { lat: Points[i].longitude, lng: Points[i].latitude }
+    a = maps.Marker({
+      position: latLng,
+      map: map,
+    });
+  }
 }
