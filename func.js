@@ -81,6 +81,24 @@ function CanHoTro(){
     });
   }
 }
+function Mathang(String TenMatHang){
+  
+  var map = new GMaps({
+    el: '#map',
+    lat: 10.043333,
+    lng: 106.028333
+  });
+  var latLng //= { lat: 10.043333, lng: 106.028333 }
+  Points=AllPoint(1,TenMatHang);
+  var a
+  for (i=0; i<Points.length; i++){
+    latLng = { lat: Points[i].longitude, lng: Points[i].latitude }
+    a = maps.Marker({
+      position: latLng,
+      map: map,
+    });
+  }
+}
 function DatHangThietYeu(){
   alert("Đặt hàng thiết yếu");
 }
