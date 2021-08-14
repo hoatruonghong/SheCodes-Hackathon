@@ -21,8 +21,8 @@
         <a href="#" class="logo">Delicare</a>
         <div class="nav">
           <ul>
-            <li><a href="#">Tôi muốn cung cấp</a></li>
-            <li><a href="#">Tôi cần hỗ trợ</a></li>
+            <li class="provider"><a href="#">Tôi muốn cung cấp</a></li>
+            <li class="needy"><a href="#">Tôi cần hỗ trợ</a></li>
           </ul>
           
         </div>
@@ -33,10 +33,46 @@
       </div>
       
     </header>
-  
-    <div id="map">
+    <div id="container">
+      <div id="map">
+      </div>
+      <div id="info">
+        <div class="form1">
+          <form action="">
+            <div class="tracuu">
+              <h3>Điểm tra cứu</h3>
+              <div class="city">TP HCM</div>
+              <div class="district">Quận 1</div>
+            </div>
+              <div class="locate">
+                <h3>Vị trí hiện tại</h3>
+                <input type="text" class="searchlocation" name="" placeholder="Tòa nhà Bitexco 19 Nguyễn Huệ...">
+              </div>
+              <div class="hienthi">
+                <h3>Hiển thị</h3>
+                  <button type="submit" onclick="DiemCungCap()">Điểm cung cấp</button>
+                  <button type="submit" onclick="HoTroYTe()">Điểm hỗ trợ y tế</button>
+                  <button type="submit" onclick="DanCungCap()">Dân cung cấp</button>
+                  <button type="submit" onclick="CanHoTro()">Cần hỗ trợ</button>
+                
+              </div>
+              <div class="catagories">
+                <h3>Mặt hàng</h3>
+                <button type="submit">Rau củ quả</button>
+                <button type="submit">Nước uống</button>
+                <button type="submit">Thực phẩm khô</button>
+                <button type="submit">Dụng cụ sơ cứu</button>
+                <button type="submit">Thuốc</button>
+                <button type="submit">Đồ gia dụng</button>
+                <button type="submit">Hóa chất</button>
+                <button type="submit">Xăng dầu</button>
+              </div>
+          </form>
+        </div>
+        
+      </div>
     </div>
-
+    
     <script>
         var map = new GMaps({
           el: '#map',

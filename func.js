@@ -5,3 +5,16 @@ function initMap() {
       map: map,
     });
 }
+
+function DiemCungCap(){
+  alert("Diem cung cap");
+}
+function HoTroYTe(){
+  alert("Ho tro y te");
+}
+function DanCungCap(){
+  alert("Dan Cung Cap");
+}
+function CanHoTro(){
+  alert("Can ho tro");
+}
