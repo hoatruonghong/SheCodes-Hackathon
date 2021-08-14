@@ -81,3 +81,9 @@ function CanHoTro(){
     });
   }
 }
+function DatHangThietYeu(){
+  alert("Đặt hàng thiết yếu");
+}
+function YeuCauHoTro(){
+  alert("Yêu cầu hỗ trợ");
+}
