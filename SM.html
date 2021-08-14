@@ -12,10 +12,6 @@
   </style>
   <link rel="stylesheet" href="assets/style.css">
   <script src="func.js"></script>
-  <script src="Backend.js"></script>
-  <script src="db.js"></script>
-  <script src="model.js"></script>
-  <script src="controller.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
@@ -41,38 +37,52 @@
       <div id="map">
       </div>
       <div id="info">
-        <div class="form1">
-          <form action="">
-            <div class="tracuu">
-              <h3>Điểm tra cứu</h3>
-              <div class="city">TP HCM</div>
-              <div class="district">Quận 1</div>
+        <!---------------------Siêu thị 0 đồng-------------------------->
+        <div class="form2">
+          <div class="back">
+            <a href="#"><h6>Tìm kiếm</h6></a>
+          </div>
+          <h2>Siêu thị 0 đồng</h2>
+          <div class="address">
+            <h3>Địa chỉ</h3>
+            <p>Trung tâm Văn hóa quận 8, 6 Dương Quan Đông, Phường 5, Quận 8, TP.HCM</p>
+          </div>
+          <div class="locate">
+            <h3>Vị trí hiện tại</h3>
+            <input type="text" class="searchlocation" name="" placeholder="Tòa nhà Bitexco 19 Nguyễn Huệ...">
+          </div>
+          <div class="catagories">
+            <h3>Mặt hàng có sẵn</h3>
+            <button type="submit">Rau củ quả</button>
+            <button type="submit">Nước uống</button>
+            <button type="submit">Thực phẩm khô</button>
+            <button type="submit">Dụng cụ sơ cứu</button>
+          </div>
+          <div class="transform">
+            <div class="hotline">
+              <h3>Đường dây nóng</h3>
+              <p>1800 989 8389</p>
+              <i class="fas fa-phone-square-alt"></i>
             </div>
-              <div class="locate">
-                <h3>Vị trí hiện tại</h3>
-                <input type="text" class="searchlocation" name="" placeholder="Tòa nhà Bitexco 19 Nguyễn Huệ...">
-              </div>
-              <div class="hienthi">
-                <h3>Hiển thị</h3>
-                  <button type="submit" onclick="DiemCungCap()">Điểm cung cấp</button>
-                  <button type="submit" onclick="HoTroYTe()">Điểm hỗ trợ y tế</button>
-                  <button type="submit" onclick="test()">Dân cung cấp</button>
-                  <button type="submit" onclick="CanHoTro()">Cần hỗ trợ</button>
-              </div>
-              <div class="catagories">
-                <h3>Mặt hàng</h3>
-                <button type="submit">Rau củ quả</button>
-                <button type="submit">Nước uống</button>
-                <button type="submit">Thực phẩm khô</button>
-                <button type="submit">Dụng cụ sơ cứu</button>
-                <button type="submit">Thuốc</button>
-                <button type="submit">Đồ gia dụng</button>
-                <button type="submit">Hóa chất</button>
-                <button type="submit">Xăng dầu</button>
-              </div>
-          </form>
+            <div class="down-bar">
+              <ul>
+                <li><a href="#">Chỉ đường</a></li>
+                <li><a href="#">Đặt giao hàng</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="infoUser">
+            <h3>Thông tin cơ bản</h3>
+            <form action="">
+              <input type="text" class="info-user" name="" placeholder="Tên" required>
+              <input type="text" class="info-user" name="" placeholder="Số điện thoại" required>
+              <input type="text" class="info-user" name="" placeholder="Địa chỉ" required>
+              <input type="text" class="info-user" name="" placeholder="Mã Voucher">
+              <input type="text" class="info-user" name="" placeholder="Nhập tài khoản" required>
+              <button type="submit" onclick="DatHang()">Đặt hàng</button>
+            </form>
+          </div>
         </div>
-        
         
       </div>
     </div>
