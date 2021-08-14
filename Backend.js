@@ -19,6 +19,8 @@ class Point{
         this.id_point=id_point;
         this.id_user=id_user;
         this.the_needy=the_needy;
+        this.longitude=longitude;
+        this.latitude=latitude;
     }
 }
 
@@ -46,18 +48,6 @@ class User{
         this.pwd=pwd;
     }
 }
-const { getAccount } = require('./model.js')
-
-const model = require('./model.js')
-async function Diemcungcap(){
-
-    const account = await model.getAccount()
-    for( i = 0; i<account[0].length; i++){
-        console.log(account[0][i].fullname)
-    }
-    //console.log(account[0])
-}
-test()
 //Tạo get set info cho account, gọi các hàm bên controller
 //Tạo get set info cho account, gọi các hàm bên controller
 /*--------Account-----------*/
@@ -130,4 +120,18 @@ function getID_User(user){
 }
 function getPwdAccount(user){
     return user.pwd;
+}
+
+
+
+const { getAccount } = require('./model.js')
+
+const model = require('./model.js')
+async function Diemcungcap(){
+
+    const account = await model.getAccount()
+    for( i = 0; i<account[0].length; i++){
+        console.log(account[0][i].fullname)
+    }
+    //console.log(account[0])
 }
