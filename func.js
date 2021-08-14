@@ -21,3 +21,6 @@ function CanHoTro(){
 function DatHang(){
   alert("Đặt hàng ?");
 }
+function DatHangThietYeu(){
+  alert("Xác nhận");
+}
