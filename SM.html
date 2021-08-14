@@ -74,12 +74,18 @@
           <div class="infoUser">
             <h3>Thông tin cơ bản</h3>
             <form action="">
-              <input type="text" class="info-user" name="" placeholder="Tên" required>
-              <input type="text" class="info-user" name="" placeholder="Số điện thoại" required>
-              <input type="text" class="info-user" name="" placeholder="Địa chỉ" required>
-              <input type="text" class="info-user" name="" placeholder="Mã Voucher">
-              <input type="text" class="info-user" name="" placeholder="Nhập tài khoản" required>
-              <button type="submit" onclick="DatHang()">Đặt hàng</button>
+              <input type="text" class="fullname" name="" placeholder="Tên" required>
+              <input type="text" class="phone" name="" placeholder="Số điện thoại" required>
+              <input type="text" class="addr" name="" placeholder="Địa chỉ" required>
+              <input type="text" class="voucher" name="" placeholder="Mã Voucher">
+              <input type="text" class="username" name="" placeholder="Nhập tài khoản" required>
+              <button type="submit" onclick="DatHang(document.getElementsByClassName(fullname).value,
+              document.getElementsByClassName(phone).value,
+              document.getElementsByClassName(addr).value,
+              document.getElementsByClassName(voucher).value,
+              document.getElementsByClassName(username).value,)">
+                Đặt hàng
+              </button>
             </form>
           </div>
         </div>
