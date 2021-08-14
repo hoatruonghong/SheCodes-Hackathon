@@ -20,7 +20,7 @@
     min-height: 100vh;
 }
 .nav-bar{
-    position: absolute;
+    position: fixed;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.06);
     position: absolute;
     display: flex;
@@ -34,7 +34,7 @@
 }
 .logo{
     flex: 1 1 auto;
-    margin-left: 10%;
+    margin-left: 6%;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: bold;
@@ -75,7 +75,7 @@ a{
 .search-box{
     height: 39px;
     flex-direction: row;
-    margin: auto 10px;
+    margin: auto 3% auto 10px;
     width: fit-content;
     display: flex;
     height: 39px;
@@ -115,5 +115,5 @@ a{
 .container{
     color: var(--white-color);
     width: 80px;
-    z-index: 1;
+    z-index: 1000;
 }
