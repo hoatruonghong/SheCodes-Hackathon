@@ -68,16 +68,23 @@ function MatHang(TenMatHang){
     });
   }
 }
+
+//user là global object
 function DatHangThietYeu(){
   
-  alert("Đặt hàng thiết yếu");
   DatHang(name,phone,addr,voucher,user)
+  alert("Đặt hàng thiết yếu");
   
 }
 function YeuCauHoTro(){
-  alert("Yêu cầu hỗ trợ");
   
   DatHang(name,phone,addr,voucher,user)
+  alert("Yêu cầu hỗ trợ");
+}
+
+async function HoTroYTe(user){
+  const account = await model.MedicalSupport( user.id, 1, 1)
+  alert("Đang gọi hỗ trợ cho bạn")
 }
 async function DatHang(name,phone,addr,voucher,user){
   //gọi hàm đặt hàng, trả về successfull
@@ -90,6 +97,8 @@ const { allPoint } = require("./model.js");
 const { getAccount } = require('./model.js')
 const { getMatHang } = require('./model.js')
 const{Order}=require('./model.js')
+const{MedicalSupport}=require('./model.js')
+const{Essential}=require('./model.js')
 
 async function test(){
     const account = await model.getAccount()
@@ -132,7 +141,7 @@ async function AllItem(){
     return account[0]
 }
 
-async function Diemcungcap(){
+async function DanhSachUser(){
 
   const account = await model.getAccount()
   for( i = 0; i<account[0].length; i++){
@@ -140,4 +149,5 @@ async function Diemcungcap(){
   }
   //console.log(account[0])
 }
-MatHang("A")
+//testing
+DanhSachUser()
