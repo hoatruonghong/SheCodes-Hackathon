@@ -1,6 +1,10 @@
 const db=require('./db.js')
 
 module.exports = {
+    Essential(user, longitude, latitude, item){
+        const sql=`insert into Support_Points values (${user.id},${longitude},${latitude}, ${item})`
+        return db.raw(sql);
+    },
     getAccount(){
         const sql=`select * from account`;
         console.log();
@@ -17,7 +21,8 @@ module.exports = {
         return db.raw(sql);
     },
     addPoint(id,user, the_needy, long, lat){
-        const sql=``
+        const sql=`insert into support_point values (${id},${user.id},${the_needy},${long},${lat})`
+        return db.raw(sql);
     },
     getMatHang(Type,Name){
         const sql=`select US.latitude, US.longitude
@@ -26,12 +31,9 @@ module.exports = {
         return db.raw(sql);
     },
 
-    Order(){
+    Order(id,id_helper,the_needy_fag){
         
-        const sql=`INSERT INTO Bill VALUES (3,5,$True)`
+        const sql=`insert into Bill vaues (${id},${id_helper},${the_needy_fag})`
         return db.raw(sql);
-    }
-//Hàm hàm hàm
-
-
+    },
 }

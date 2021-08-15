@@ -70,35 +70,38 @@ function MatHang(TenMatHang){
 }
 
 //user là global object
-function DatHangThietYeu(){
+function DatHangThietYeu(user, addr, item){
   
-  DatHang(name,phone,addr,voucher,user)
-  alert("Đặt hàng thiết yếu");
+  return async function HoTroYTe(user,addr,item){
+    const account = await model.Essential( user.id,addr,item)
+    alert("Đặt hàng thiết yếu");
+  } 
   
-}
-function YeuCauHoTro(){
   
-  DatHang(name,phone,addr,voucher,user)
-  alert("Yêu cầu hỗ trợ");
 }
 
-async function HoTroYTe(user){
-  const account = await model.MedicalSupport( user.id, 1, 1)
-  alert("Đang gọi hỗ trợ cho bạn")
-}
-async function DatHang(name,phone,addr,voucher,user){
-  //gọi hàm đặt hàng, trả về successfull
 
-  const account = await model.Order( user.id, 0, 1)
-  //Drone button()
-  alert("Đặt hàng thành công rồi nhé")
-}
+//DECLARE MODEL
 const { allPoint } = require("./model.js");
 const { getAccount } = require('./model.js')
 const { getMatHang } = require('./model.js')
 const{Order}=require('./model.js')
 const{MedicalSupport}=require('./model.js')
 const{Essential}=require('./model.js')
+
+
+
+//ASYNC FUNCTION
+async function HoTroYTe(user){
+  const account = await model.MedicalSupport( user.id, 1, 1)
+  alert("Đang gọi hỗ trợ cho bạn")
+}
+async function DatHang(name,phone,addr,voucher,user){
+  //gọi hàm đặt hàng, trả về successfull
+  const account = await model.Order( user.id, 0, 1)
+  //Drone button()
+  alert("Đặt hàng thành công rồi nhé")
+}
 
 async function test(){
     const account = await model.getAccount()
@@ -151,3 +154,10 @@ async function DanhSachUser(){
 }
 //testing
 DanhSachUser()
+/*
+Hong Phuc
+Hong Hoa
+Thanh Xuan
+Amanda Vu
+Le Tran
+*/
