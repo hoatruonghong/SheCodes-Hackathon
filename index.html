@@ -2,7 +2,7 @@
 <html>
 <head>
   <title></title>
-  <script src="http://maps.google.com/maps/api/js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
   <script src="gmaps-master/gmaps.js"></script>
   <style type="text/css">
     #map {
@@ -11,13 +11,25 @@
     }
   </style>
   <link rel="stylesheet" href="assets/style.css">
-  <script src="func.js"></script>
-  <script src="Backend.js"></script>
-  <script src="db.js"></script>
-  <script src="model.js"></script>
-  <script src="controller.js"></script>
+  <script type="module" src="func.js"></script>
+  <script type="module" src="Backend.js"></script>
+  <script type="module" src="db.js"></script>
+  <script type="module" src="model.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
+  <script >
+      MyData = { 
+          //users = new Users(1,'hongphuc','hongphuc'),
+          the_map : new GMaps({
+          el: '#map',
+          lat: 10.043333,
+          lng: 106.028333
+        })
+       };
+// Then to access...
+      //myNamespace.myGlobal = 6;
+
+  </script>
 </head>
 <body>
     <header>
