@@ -84,7 +84,6 @@ async function DatHang(name,phone,addr,voucher,user){
 
   const account = await model.Order( user.id, 0, 1)
   //Drone button()
-  //lam sao de hien success day
   alert("Đặt hàng thành công rồi nhé")
 }
 const { allPoint } = require("./model.js");
@@ -92,25 +91,14 @@ const { getAccount } = require('./model.js')
 const { getMatHang } = require('./model.js')
 const{Order}=require('./model.js')
 
-
-
-
-
-
-
-
-
-
-
 async function test(){
-
     const account = await model.getAccount()
     /*for( i = 0; i<account[0].length; i++){
         console.log(account[0][i].fullname)
     }*/
     //console.log(account[0])
-    AAA = account[0]
-    console.log("okey")
+    global_var = account[0]
+    return global_var
 }
 async function AllPoint(){
 
