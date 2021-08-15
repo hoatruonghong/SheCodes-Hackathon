@@ -1,4 +1,4 @@
-const model = require("./model");
+const model = require("./model.js");
 
 
 class Account{
@@ -15,7 +15,7 @@ class Account{
 }
 
 class Point{
-    constructor(id_point, id_user, the_needy){
+    constructor(id_point, id_user, the_needy, longitude,latitude){
         this.id_point=id_point;
         this.id_user=id_user;
         this.the_needy=the_needy;
@@ -124,9 +124,8 @@ function getPwdAccount(user){
 
 
 
-const { getAccount } = require('./model.js')
+//const { getAccount } = require('./model.js')
 
-const model = require('./model.js')
 async function Diemcungcap(){
 
     const account = await model.getAccount()
@@ -135,3 +134,4 @@ async function Diemcungcap(){
     }
     //console.log(account[0])
 }
+Diemcungcap()
