@@ -69,21 +69,28 @@ function MatHang(TenMatHang){
   }
 }
 function DatHangThietYeu(){
+  
   alert("Đặt hàng thiết yếu");
+  DatHang(name,phone,addr,voucher,user)
+  
 }
 function YeuCauHoTro(){
   alert("Yêu cầu hỗ trợ");
+  
+  DatHang(name,phone,addr,voucher,user)
 }
 async function DatHang(name,phone,addr,voucher,user){
   //gọi hàm đặt hàng, trả về successfull
-  const account = await model.Order(name,phone,addr,voucher,user)
+
+  const account = await model.Order( user.id, 0, 1)
   //Drone button()
   //lam sao de hien success day
+  alert("Đặt hàng thành công rồi nhé")
 }
 const { allPoint } = require("./model.js");
 const { getAccount } = require('./model.js')
 const { getMatHang } = require('./model.js')
-
+const{Order}=require('./model.js')
 
 
 

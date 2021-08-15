@@ -124,14 +124,3 @@ function getPwdAccount(user){
 
 
 
-//const { getAccount } = require('./model.js')
-
-async function Diemcungcap(){
-
-    const account = await model.getAccount()
-    for( i = 0; i<account[0].length; i++){
-        console.log(account[0][i].fullname)
-    }
-    //console.log(account[0])
-}
-Diemcungcap()
