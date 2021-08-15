@@ -37,44 +37,53 @@
       </div>
       
     </header>
-    <div id="container">
       <div id="map">
       </div>
       <div id="info">
-        <div class="form1">
-          <form action="">
-            <div class="tracuu">
+        <div class="form">
+          <div class="diemtracuu">
+            <div class="dtc">
               <h3>Điểm tra cứu</h3>
-              <div class="city">TP HCM</div>
-              <div class="district">Quận 1</div>
             </div>
-              <div class="locate">
-                <h3>Vị trí hiện tại</h3>
-                <input type="text" class="searchlocation" name="" placeholder="Tòa nhà Bitexco 19 Nguyễn Huệ...">
-              </div>
-              <div class="hienthi">
-                <h3>Hiển thị</h3>
-                  <button type="submit" onclick="DiemCungCap()">Điểm cung cấp</button>
-                  <button type="submit" onclick="HoTroYTe()">Điểm hỗ trợ y tế</button>
-                  <button type="submit" onclick="test()">Dân cung cấp</button>
-                  <button type="submit" onclick="CanHoTro()">Cần hỗ trợ</button>
-              </div>
-              <div class="catagories">
-                <h3>Mặt hàng</h3>
-                <button type="submit">Rau củ quả</button>
-                <button type="submit">Nước uống</button>
-                <button type="submit">Thực phẩm khô</button>
-                <button type="submit">Dụng cụ sơ cứu</button>
-                <button type="submit">Thuốc</button>
-                <button type="submit">Đồ gia dụng</button>
-                <button type="submit">Hóa chất</button>
-                <button type="submit">Xăng dầu</button>
-              </div>
-          </form>
+            <div class="f19">
+              <select class="f3">
+                <option value="tp">TP HCM</option>
+              </select>
+              <select class="f3">
+                <option value="q">Quận 1</option>
+              </select>
+            </div>
+          </div>
+          <div class="locate">
+            <label>Vị trí hiện tại của bạn</label>
+            <input class="searchlocation" type="text" placeholder="Nhập địa chỉ">
+          </div>
+          <div class="display">
+            <label>Hiển thị</label>
+              <button class="f7" type="submit" onclick="DiemCungCap()">Điểm cung cấp</button>
+              <button class="f8" type="submit" onclick="HoTroYTe()">Điểm hỗ trợ y tế</button>
+              <button class="f9" type="submit" onclick="test()">Dân cung cấp</button>
+              <button class="f10" type="submit" onclick="CanHoTro()">Cần hỗ trợ</button>
+          </div>
+          <div class="catagories">
+            <label>Mặt hàng</label>
+            <div class="f16">
+              <div class="f11">Rau củ quả</div>
+              <div class="f12">Nước uống</div>
+              <div class="f13">Thực phẩm khô</div>
+            </div>
+            <div class="f17">
+              <div class="f11">Dụng cụ sơ cứu</div>
+              <div class="f12">Thuốc</div>
+              <div class="f13">Đồ gia dụng</div>
+            </div>
+            <div class="f18">
+              <div class="f11">Hóa chất</div>
+              <div class="f12">Xăng</div>
+            </div>
+          </div>
         </div>
         
-        
-      </div>
     </div>
     
     <script>
@@ -90,9 +99,6 @@
         });
         
       </script>
-    <input type="text" placeholder="Type something..." id="myInput">
-    <button type="button" onclick="getInput();">Get Value</button>
-    
     <script>
         function getInput(){
             var inputVal = document.getElementById("myInput").value;

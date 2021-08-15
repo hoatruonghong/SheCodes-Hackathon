@@ -15,24 +15,13 @@
     --grey-color: #9999;
 }
 
-#container{
-    width: 100%;
-}
 
 #map{
-    position: absolute;
-    width: 75%;
+    position: relative;
+    width: 100%;
     min-height: 100vh;
-    float: left;
 }
-#info{
-    width: 25%;
-    min-height: 100vh;
-    padding: 100px 0;
-    margin-left: 50px;
-    float: right;
-    background-color: #ffff;
-}
+
 .nav-bar{
     position: fixed;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.06);
@@ -138,7 +127,442 @@ a{
     z-index: 1000;
 }
 
-.locate input{
+.form{
+    margin: 10px 20px;
+    position: absolute;
+    width: 494px;
+    height: 600px;
+    right: 50px;
+    top: 100px;
+    
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+}
+.form .diemtracuu{
+    position: absolute;
+    width: 346px;
+    height: 79px;
+    left: 20px;
+    top: 20px;
+    margin: 10px;
+}
+.form .diemtracuu h3{
+    width: fit-content;
+}
+.diemtracuu .dtc{
+    position: absolute;
+    width: 99px;
+    height: 23px;
+    /*right: 419px;*/
+    /*top: 182px;*/
+
+    font-family: Be Vietnam;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+}
+
+.form .locate{
+    position: absolute;
+    width: 408px;
+    height: 75px;
+    left: 20px;
+    top: 130px;
+}
+.locate .searchlocation{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 13px;
+
+    position: sticky;
+    width: 408px;
+    height: 46px;
+    right: 110px;
+    top: 308px;
+
+    background: #E5E5E5;
+    border-radius: 8px;
+}
+
+.form .display{
+    position: absolute;
+    width: 418px;
+    height: 134px;
+    left: 20px;
+    top: 230px;
+}
+.display .f7{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px 13px;
+
+    position: absolute;
+    width: 200px;
+    height: 48px;
+    right: 28px;
+    top: 20px;
+
+    background: #FAD749;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.display .f8{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px 13px;
+
+    position: absolute;
+    width: 189px;
+    height: 48px;
+    right: 229px;
+    top: 78px;
+
+    background: #FF9797;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.display .f9{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px 13px;
+
+    position: absolute;
+    width: 206px;
+    height: 48px;
+    right: 0px;
+    top: 20px;
+
+    background: #49D3FF;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.display .f10{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px 13px;
+
+    position: absolute;
+    width: 160px;
+    height: 48px;
+    right: 59px;
+    top: 78px;
+
+    background: #FF1212; 
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.form .catagories{
+    position: absolute;
+    width: 420px;
+    height: 186px;
+    left: 20px;
+    top: 400px;
+}
+.catagories .f16{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: sticky;
+    width: 420px;
+    height: 46px;
+    right: 98px;
+    top: 475px;
+}
+.f16 .f11{
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px 13px;
+
+    position: static;
+    width: 122px;
+    height: 46px;
+    left: 0px;
+    top: 0px;
+
+    background: #FAD749;
+    border-radius: 8px;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 10px;
+}
+.f16 .f12{
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px 13px;
+
+    position: static;
+    width: 119px;
+    height: 46px;
+    left: 132px;
+    top: 0px;
+
+    background: #FAD749;
+    border-radius: 8px;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 10px;
+}
+.f16 .f13{
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px 13px;
+
+    position: static;
+    width: 159px;
+    height: 46px;
+    left: 261px;
+    top: 0px;
+
+    background: #FAD749;
+    border-radius: 8px;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 10px;
+}
+.catagories .f17{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: sticky;
+    width: 387px;
+    height: 46px;
+    right: 131px;
+    top: 621px;
+}
+.f17 .f11{
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px 13px;
+
+    position: static;
+    width: 158px;
+    height: 46px;
+    left: 0px;
+    top: 0px;
+
+    background: #FAD749;
+    border-radius: 8px;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 10px;
+}
+.f17 .f12{
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px 13px;
+
+    position: static;
+    width: 80px;
+    height: 46px;
+    left: 168px;
+    top: 0px;
+
+    background: #FAD749;
+    border-radius: 8px;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 10px;
+}
+.f17 .f13{
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px 13px;
+
+    position: static;
+    width: 129px;
+    height: 46px;
+    left: 258px;
+    top: 0px;
+
+    background: #E5E5E5;
+    border-radius: 8px;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 10px;
+}
+.catagories .f18{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: sticky;
+    width: 222px;
+    height: 46px;
+    right: 296px;
+    top: 677px;
+}
+.f18 .f11{
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px 13px;
+
+    position: static;
+    width: 104px;
+    height: 46px;
+    left: 0px;
+    top: 0px;
+
+    background: #E5E5E5;
+    border-radius: 8px;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 10px;
+}
+.f18 .f12{
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px 13px;
+
+    position: static;
+    width: 108px;
+    height: 46px;
+    left: 114px;
+    top: 0px;
+
+    background: #E5E5E5;
+    border-radius: 8px;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 10px;
+}
+
+.diemtracuu .f19{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+
+    position: sticky;
+    width: 346px;
+    height: 50px;
+    right: 172px;
+    top: 211px;
+}
+
+.f3{
+    /* Auto Layout */
+
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+align-items: center;
+padding: 12px;
+
+position: static;
+width: 171px;
+height: 50px;
+right: 175px;
+top: 0px;
+
+background: #FFFFFF;
+border: 2px solid #FAD749;
+box-sizing: border-box;
+border-radius: 8px;
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 10px;
+}
+
+.rectangle{
+    position: absolute;
+    width: 44px;
+    height: 43px;
+    left: 174px;
+    top: 357px;
+
+    background: #49D3FF;
+    border-radius: 8px;
+}
+
+.form .f7{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px 13px;
+
+    position: absolute;
+    width: 198px;
+    height: 48px;
+    right: 148px;
+    top: 52px;
+
+    background: #FAD749;
+    border-radius: 8px;
+}
+/*.locate input{
     width: 250px;
     height: 39px;
     right: 37px;
@@ -180,10 +604,4 @@ a{
     border-radius: 8px;
     align-items: center;
     border: 2px solid var(--yellow-color) ;
-}
-.form1{
-    margin: auto 20px;
-}
-.form2{
-    margin: auto 20px;
-}
+}*/
